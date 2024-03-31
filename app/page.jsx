@@ -1,5 +1,6 @@
 "use client"
 
+// import WPAInstall from "@/components/WPAInstall";
 import dynamic from "next/dynamic";
 
 const HeadingText = dynamic(() => import("@/components/HeadingText"), { ssr: false, loading: () => <div>Loading...</div> })
@@ -16,7 +17,7 @@ export default function Home() {
       <BellRing />
 
       <SendButton/>
-
+      {/* <WPAInstall/> */}
       </main>
   );
 }

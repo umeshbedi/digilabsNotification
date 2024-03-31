@@ -4,7 +4,16 @@ import React from 'react'
 export default function SendButton() {
 
     function sendNotification() {
-        alert("clicked")
+        Notification.requestPermission()
+        .then(e=>{
+            if(e==="granted"){
+                new Notification("Example Notifications",{
+                    body:"This is more text",
+                    icon:"/icon-192x192.png",
+                    silent:true
+                })
+            }
+        })
       }
 
     return (
