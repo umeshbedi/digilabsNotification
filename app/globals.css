@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: white;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -16,18 +16,98 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background: #000000;
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.mybutton-container {
+  padding: 1rem;
+  background: linear-gradient(90deg, rgba(157, 13, 61, 0) -13.1%, #DE502C 53.99%, #C6802C 113.76%);
+  padding: 3px;
+  border-radius: 12px;
+  position: relative;
 }
+
+.mybutton {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #350a10, #dd522b, #522a11);
+  border-radius: 10px;
+  display: flex;
+  place-content: center;
+  z-index: 10;
+}
+
+
+.bellback {
+  background: linear-gradient(360deg, rgba(157, 13, 61, 0) -23%, rgba(223, 81, 43, 0.76) 45.16%, #BF8C2C 103%);
+}
+
+.ringAll {
+  border: 2px solid #CE722C;
+  position: absolute;
+  border-radius: 999px;
+  z-index: -10;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.ring0 {
+  height: 160px;
+  width: 160px;
+  animation-name: ring0;
+}
+
+.ring1 {
+  height: 222px;
+  width: 222px;
+  animation-name: ring1;
+  
+}
+
+.ring2 {
+  height: 278px;
+  width: 278px;
+  animation-name: ring2;
+  
+}
+
+.ring3 {
+  height: 344px;
+  width: 344px;
+  animation-name: ring3;
+  
+}
+
+.ring4 {
+  height: 344px;
+  width: 344px;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,1));
+  border:none !important
+}
+
+@keyframes ring0{
+  0% {height: 100px; width: 100px; opacity: 1;}
+  50% {opacity: 1;}
+  100% {height: 160px; width: 160px;opacity: 0;}
+}
+@keyframes ring1{
+  0% {height: 100px; width: 100px; opacity: 1;}
+  50%{opacity: 1;}
+  100% {height: 222px; width: 222px; opacity: 0;}
+}
+@keyframes ring2{
+  0% {height: 100px; width: 100px;opacity: 1;}
+  50%{opacity: 1;}
+  100% {height: 278px; width: 278px;opacity: 0;}
+}
+@keyframes ring3{
+  0% {height: 100px; width: 100px;opacity: 1;}
+  50%{opacity: 1;}
+  100% {height: 344px; width: 344px;opacity: 0;}
+}
+
