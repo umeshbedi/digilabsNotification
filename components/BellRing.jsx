@@ -14,7 +14,7 @@ export default function BellRing() {
             <Ring key={i} num={i}/>
           ))}
 
-          <div className="relative w-[70px] h-[70px]">
+          <div className="relative w-[70px] h-[70px] bell">
             <Image fill src={"/bell.svg"} alt="bell icon" />
           </div>
 
