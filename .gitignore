@@ -36,6 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 #remove PWA service workers
-**/public/sw.js
-**/public/workbox-*.js
-**/public/worker-*.js
+# **/public/sw.js
+# **/public/workbox-*.js
+# **/public/worker-*.js
